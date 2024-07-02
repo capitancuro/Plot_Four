@@ -4,14 +4,15 @@ import java.util.HashMap;
 
 import assets.AssetsManager;
 
-import javafx.scene.Scene; //Needed to work with content accessed via the Port
-import javafx.scene.Parent; //Needed to store subclasses of parent
-import javafx.scene.paint.Color; //Needed to set color of the root node
+import javafx.scene.Scene;
+import javafx.scene.Parent;
+import javafx.scene.paint.Color;
 
 import contexts.Controller; //Needed to control interactions between different contexts
 import contexts.PlotFour;
 import contexts.StartMenu;
 import contexts.PauseMenu;
+
 
 //The scene used to store different contexts of the Plot Four app
 public class Port extends Scene {
@@ -31,7 +32,7 @@ public class Port extends Scene {
 		this.assetsManager = assetsManager; 
 		this.controller = controller;
 		
-		controller.contexts = new HashMap<String, Parent>();
+		controller.contexts = new HashMap<String, Parent>(); //Pairs each context with a string key to find them on request
 		setContexts();
 	}
 	
