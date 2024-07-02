@@ -1,15 +1,14 @@
 package plot_four_app;
 
-import assets.AssetsManager;
-import contexts.Controller;
 //JAVA FX DEPENDENCIES
 import javafx.application.Application; //Class needed for the Application
 import javafx.stage.Stage; //Class needed for window(s) of the application
-import javafx.scene.image.Image;
+import javafx.scene.image.Image;  
 
-//PLOT FOUR CLASSES
-import plot_four_app.*;
+import assets.AssetsManager;
+import contexts.Controller;
 
+//Class responsible for creating the main stage/window
 public class PlotFourApp extends Application {
 	
 	private final double WIDTH = 1000;
