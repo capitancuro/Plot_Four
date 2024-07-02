@@ -14,6 +14,7 @@ import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.scene.control.Button;
 
+//The initial context of the Plot Four applications
 public class StartMenu extends VBox {
 	
 	public AssetsManager assetsManager = null;
