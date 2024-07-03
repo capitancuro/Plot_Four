@@ -370,7 +370,9 @@ public class PlotFour extends Group {
 			audioPlayer.seek(audioPlayer.getStartTime());
 		}
 	}
-	
+
+	//win() employs both iteration and recursion to limit unessesary row and column traversal to check for a winning move.
+	//It could be forther optimized using pure iteration to reduce the increased memory complexity required for recursion
 	private int win(Position position, int v, int u, int n) {
 		if(position == null)
 			return 0;
