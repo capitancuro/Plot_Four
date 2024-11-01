@@ -1,1 +1,1 @@
-![alt text](https://github.com/capitancuro/Plot_Four/blob/main/P4S.png)
+![alt text](https://github.com/capitancuro/Plot_Four/blob/main/Plot_Four.png)
