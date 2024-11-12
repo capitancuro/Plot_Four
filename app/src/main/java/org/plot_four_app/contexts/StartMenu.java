@@ -22,16 +22,18 @@ public class StartMenu extends VBox {
 	public Controller controller = null;
 
 	
-	private final Image plot_four_icon = new Image("file:./src/main/resources/images/Plot_Four.png");
-	private final ImageView plot_four_view = new ImageView(plot_four_icon);
+	private Image plot_four_icon = null;
+	private ImageView plot_four_view = null;
 	
 	private Text plot_four_title = new Text("PLOT FOUR");
-	
 	private final Button startButton = new Button("START");
 	
 	public StartMenu(AssetsManager assetsManager, Controller controller) {
 		this.assetsManager = assetsManager;
 		this.controller = controller;
+
+		plot_four_icon = this.assetsManager.getImage();
+		plot_four_view = new ImageView(plot_four_icon);
 		
 		setAlignment(Pos.CENTER);
 		setBackground(new Background(new BackgroundFill(Color.BLACK, null, null)));
