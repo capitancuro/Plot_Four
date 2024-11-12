@@ -48,16 +48,12 @@ jar {
     duplicatesStrategy(DuplicatesStrategy.EXCLUDE)
     
     manifest {
-        attributes 'Main-Class': 'org.plot_four_app.App'
+        attributes 'Main-Class': 'org.plot_four_app.Launcher'
     }
 
     from {
         configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
     }
-}
-
-run {
-    standardInput = System.in
 }
 
 javafx {
@@ -67,5 +63,5 @@ javafx {
 
 application {
     // Define the main class for the application.
-    mainClass = 'org.plot_four_app.App'
+    mainClass = 'org.plot_four_app.Launcher'
 }
