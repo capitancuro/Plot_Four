@@ -10,8 +10,12 @@ import javafx.scene.image.Image;
 
 import java.io.File;
 
+import org.plot_four_app.AssetsManager;
+
 public class App extends Application {
     
+    AssetsManager assetsManager = new AssetsManager();
+
     private final double WIDTH = 1000;
 	private final double HEIGHT = 500;
 
@@ -23,12 +27,7 @@ public class App extends Application {
     @Override
     public void start(Stage window) {
         window.setTitle("Plot Four");
-
-        window.getIcons().add(
-            new Image(
-                new File(
-                    new File("").getAbsolutePath() + 
-                    "/src/main/resources/images/Plot_Four.png").toURI().toString()));
+        window.getIcons().add(assetsManager.getImage());
 
         window.setResizable(false);
 
