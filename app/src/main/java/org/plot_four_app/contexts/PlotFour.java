@@ -158,7 +158,8 @@ public class PlotFour extends Group {
 			}
 			else {
 				text.setText("DRAW");
-				user.setCenterX(width/2 - (user.getRadius()*2 + 25 + text.getLayoutBounds().getWidth())/2 + 25);
+				user.setFill(Color.TRANSPARENT);
+				text.setX((positions[0][3].getX() + 25) - text.getLayoutBounds().getWidth()/2);
 			}
 			
 			liveMenu.getChildren().remove(liveMenu.forfeit);
@@ -170,7 +171,7 @@ public class PlotFour extends Group {
 	private class Piece extends Circle{																	
 		
 		public int user = 0;
-		public Position position = null;
+
 		
 		public Piece(int user) {
 			super(25);
@@ -371,7 +372,7 @@ public class PlotFour extends Group {
 	}
 
 	//win() employs both iteration and recursion to limit unessesary row and column traversal to check for a winning move.
-	//It could be forther optimized using pure iteration to reduce the increased memory complexity required for recursion
+	//It could be further optimized using pure iteration to reduce the increased memory complexity required for recursion
 	private int win(Position position, int v, int u, int n) {
 		if(position == null)
 			return 0;
